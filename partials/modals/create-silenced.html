@@ -42,6 +42,13 @@
     </div>
   </div>
   <div style="clear:both">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" ng-model="options.create_jira_ticket">Create Jira ticket
+      </label>
+    </div>
+  </div>
+  <div style="clear:both" ng-hide="options.create_jira_ticket">
     <h5>Reason</h5>
     <textarea class="form-control" rows="3" placeholder="Enter a reason" ng-model="options.reason"></textarea>
   </div>

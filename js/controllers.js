@@ -708,7 +708,7 @@ controllerModule.controller('SilencedModalController', ['backendService', 'Confi
     }
 
     $scope.entries = [];
-    $scope.options = {ac: {}, expire: 'resolve', reason: '', to: moment().add(1, 'h').format(Config.dateFormat())};
+    $scope.options = {ac: {}, create_jira_ticket: false, expire: 'resolve', reason: '', to: moment().add(1, 'h').format(Config.dateFormat())};
 
     // Get silenced entries
     Silenced.query().$promise.then(

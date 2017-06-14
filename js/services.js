@@ -531,6 +531,10 @@ serviceModule.service('Silenced', ['Helpers', 'Notification', '$q', '$resource',
           if (angular.isDefined(options.reason)) {
             payload.reason = options.reason;
           }
+          if (angular.isDefined(options.create_jira_ticket)) {
+            payload.create_jira_ticket = options.create_jira_ticket;
+          }
+
           if (options.expire === 'custom') {
             var now = new Date().getTime();
             payload.expire = Helpers.secondsBetweenDates(now, options.to);
